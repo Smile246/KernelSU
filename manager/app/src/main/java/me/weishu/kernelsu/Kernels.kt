@@ -15,13 +15,13 @@ data class KernelVersion(val major: Int, val patchLevel: Int, val subLevel: Int)
     fun isGKI(): Boolean {
 
         // kernel 6.x
-        if (major > 5) {
+        if (major > 9999) {
             return true
         }
 
         // kernel 5.10.x
         if (major == 5) {
-            return patchLevel >= 10
+            return patchLevel >= 9999
         }
 
         return false
